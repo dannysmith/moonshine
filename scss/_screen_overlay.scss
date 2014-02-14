@@ -1,0 +1,94 @@
+/**
+ * (C)Leanest CSS spinner ever
+ */
+
+.screen-overlay {
+  position: absolute;
+  top: 0; bottom: 0; left: 0; right: 0;
+  background: rgba(0,0,0,0.6);
+  text-align: center;
+}
+
+@-moz-keyframes spin { to {-moz-transform: rotate(1turn);} }
+@-webkit-keyframes spin { to {-webkit-transform: rotate(1turn);} }
+@keyframes spin { to {transform: rotate(1turn);} }
+
+.progress-wrapper {
+  columns: auto auto;
+  -webkit-columns: auto auto;
+  -moz-columns: auto auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  margin: auto;
+  width: 5em;
+  height: 5em;
+}
+
+.progress {
+  position: relative;
+  display: inline-block;
+  width: 5em;
+  height: 5em;
+  margin: 0 .5em;
+  font-size: 12px;
+  text-indent: 999em;
+  overflow: hidden;
+  -moz-animation: spin 1s infinite steps(8);
+  -webkit-animation: spin 1s infinite steps(8);
+  animation: spin 1s infinite steps(8);
+}
+
+.small.progress {
+  font-size: 6px;
+}
+
+.large.progress {
+  font-size: 24px;
+}
+
+.progress:before,
+.progress:after,
+.progress > div:before,
+.progress > div:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 2.25em; /* (container width - part width)/2  */
+  width: .5em;
+  height: 1.5em;
+  border-radius: .2em;
+  background: #eee;
+  box-shadow: 0 3.5em #eee; /* container height - part height */
+  -moz-transform-origin: 50% 2.5em; /* container height / 2 */
+  -webkit-transform-origin: 50% 2.5em; /* container height / 2 */
+  transform-origin: 50% 2.5em; /* container height / 2 */
+
+}
+
+.progress:before {
+  background: #555;
+}
+
+.progress:after {
+  -moz-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  background: #777;
+}
+
+.progress > div:before {
+  -moz-transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  background: #999;
+}
+
+.progress > div:after {
+  -moz-transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+  background: #bbb;
+}
