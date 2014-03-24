@@ -1,6 +1,6 @@
 package_assets:   on
 embed_assets:     off
-compress_assets:  on
+compress_assets:  off
 gzip_assets:      on
 javascript_compressor: uglifier
 rewrite_relative_paths: off
@@ -8,6 +8,8 @@ rewrite_relative_paths: off
 javascripts:
   main.min:
     - js/jquery.fittext.js
+    - js/froogaloop.js
+    - js/waypoints.js
     - js/application.js
   polyfills.min:
     - js/vhpolyfill.js

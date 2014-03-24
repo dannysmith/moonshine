@@ -10,4 +10,18 @@ jQuery(document).ready(function($) {
       return true;
     }
   });
+
+
+
+  $('.video-wrapper').waypoint({
+    triggerOnce: true,
+    handler: function() {
+      var iframe = $('#video-iframe')[0],
+          player = $f(iframe);
+      player.api("api_play");
+    }
+  });
+
 });
+
+

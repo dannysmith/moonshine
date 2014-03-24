@@ -1,3 +1,5 @@
+source 'https://rubygems.org'
+
 gem 'rb-fsevent'
 gem 'growl' # also install growlnotify
 gem 'guard', '~> 2'

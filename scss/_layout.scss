@@ -1,4 +1,4 @@
-@media screen and (min-width: 75em) {
+@media screen and (min-width: 105em) {
   .video-wrapper {
     width: 50%;
     float: left;
@@ -12,8 +12,8 @@
 
   .main-wrapper {
     padding: 10em 3em;
-    border-top: 3px solid darken($white, 30%);
-    background: transparent url("/assets/trees.jpg") no-repeat center;
+    //border-top: 3px solid darken($white, 30%);
+    background: transparent url("/assets/bg-bottom.jpg") no-repeat center;
     background-size: cover;
   }
 }
