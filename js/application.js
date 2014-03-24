@@ -1,6 +1,8 @@
 jQuery(document).ready(function($) {
   $('.screen-overlay').hide();
-  $('header.intro h1').show().fitText();
+  $('header.intro h1').show().fitText(1.2, {
+    maxFontSize: '100px'
+  });
 
   $('#mc-embedded-subscribe').click(function() {
     if ($('#mce-EMAIL').val() == "") {
